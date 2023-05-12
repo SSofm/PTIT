@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slideshow-container_jewelry">
+
+        <div class="mySlides_jewelry fade_jewelry">
+
+          <img src="/gucci_demo2/jewelry1.jpg">
+          <div class="text_ver3">Gucci High Jewelry</div>
+        </div>
+        
+        <div class="mySlides_jewelry fade_jewelry">
+        
+          <img src="/gucci_demo2/jewelry2.jpg" >
+          <div class="text_ver3">Gucci High Watchmaking</div>
+        </div>
+        
+        
+        <div class="dotParent_jewelry">
+            <span class="dot_jewelry"></span> 
+            <span class="dot_jewelry"></span> 
+          </div>
+        </div>
+
+        <script>
+            var slideIndex = 0;
+            showSlides_jewelry();
+            
+            function showSlides_jewelry() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides_jewelry");
+                var dots = document.getElementsByClassName("dot_jewelry");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";  
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {slideIndex = 1}    
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active_jewelry", "");
+                }
+                slides[slideIndex-1].style.display = "block";  
+                dots[slideIndex-1].className += " active_jewelry";
+                setTimeout(showSlides_jewelry, 2000);
+            }
+        </script>
+</body>
+</html>

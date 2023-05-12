@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>DropDown Menu and slider</title>
+	<link rel="stylesheet" href="style.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+	<nav>
+		<div class="logo">
+			MrWin
+		</div>
+		<ul>
+			<li><a href="#">Trang chủ</a></li>
+			<li>
+				<a href="#">Khóa học</a>
+				<ul>
+					<li><a href="#">Lập trình web</a></li>
+					<li><a href="#">Lập trình Scratch</a></li>
+					<li><a href="#">Excel-Mos</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Dịch vụ</a>
+				<ul>
+					<li><a href="#">Dạy học online</a></li>
+					<li><a href="#">Dạy học tại nhà</a></li>
+					<li><a href="#">Dịch vụ khác
+						<span class="fa fa-plus"></span>
+					</a>
+						<ul>
+							<li><a href="#">Thiết kế website</a></li>
+							<li><a href="#">Đào tạo giáo viên</a></li>
+							<li><a href="#">Thiết kế bài giảng PP</a></li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li><a href="#">Liên hệ</a></li>
+			<li><a href="#">Feedback</a></li>
+		</ul>
+	</nav>  <!--end menu--> 
+
+	<!-- slider -->
+	
+		<div class="slidershow">
+			<div class="slides">
+				<input type="radio" name="bottom" id="bottom_1" checked>
+				<input type="radio" name="bottom" id="bottom_2">
+				<input type="radio" name="bottom" id="bottom_3">
+				<input type="radio" name="bottom" id="bottom_4">
+				<input type="radio" name="bottom" id="bottom_5">
+				<div class="slide s1">
+					<img src="image/1.jpg">
+				</div>
+				<div class="slide">
+					<img src="image/2.jpg">
+				</div>
+				<div class="slide">
+					<img src="image/3.jpg">
+				</div>
+				<div class="slide">
+					<img src="image/4.jpg">
+				</div>
+				<div class="slide">
+					<img src="image/5.jpg">
+				</div>
+			</div>
+			<div class="navigation">
+				<label for="bottom_1" class="bar"></label>
+				<label for="bottom_2" class="bar"></label>
+				<label for="bottom_3" class="bar"></label>
+				<label for="bottom_4" class="bar"></label>
+				<label for="bottom_5" class="bar"></label>
+			</div>
+		</div>
+
+	<!-- end slider -->
+</body>
+</html>

@@ -1,0 +1,55 @@
+.slideshow-container_jewelry {
+    position: relative;
+    margin-top: 60px;
+    margin-left: 50px;
+    text-align: center;
+}
+  
+.text_ver3{
+    font-size: 20px;
+    position: absolute;
+    width: 100%;
+    bottom: 100px;
+    color: white; 
+    font-weight: bold;
+}
+
+.dotParent_jewelry{
+  
+    display: inline-block;
+    margin: auto;
+    padding: 0;
+  
+}
+
+.dot_jewelry {
+    height: 5px;
+    width: 5px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    
+}
+  
+.active_jewelry{
+    background-color: #aaaaaa;
+}
+  
+ 
+.fade_jewelry{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade_jewelry{
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+@keyframes fade_jewelry {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
