@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/detail_product_activity"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="12dp"
+        tools:context=".activities.DetailActivity">
+
+        <ImageView
+            android:id="@+id/product_image_1"
+            android:layout_width="wrap_content"
+            android:layout_height="290dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="40dp"
+
+            android:src="@drawable/converse_product" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="350dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/product_image_2"
+                android:layout_width="100dp"
+                android:layout_height="75dp"
+                android:layout_gravity="left"
+                android:layout_marginRight="20dp"
+                android:contentDescription="description_image_1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/slide1" />
+
+            <ImageButton
+                android:id="@+id/product_image_3"
+                android:layout_width="100dp"
+                android:layout_height="75dp"
+                android:layout_marginRight="20dp"
+                android:contentDescription="description_image_1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/slide1" />
+
+            <ImageButton
+                android:id="@+id/product_image_4"
+                android:layout_width="100dp"
+                android:layout_height="75dp"
+                android:layout_marginRight="1dp"
+                android:contentDescription="description_image_1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/slide1" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/expanded_image_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="description_zoom_touch_close"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/expanded_image_3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="description_zoom_touch_close"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/expanded_image_4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="description_zoom_touch_close"
+            android:visibility="invisible" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="550dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/productName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product name"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6" />
+
+            <TextView
+                android:id="@+id/productPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Price"
+                android:textColor="#FF0000" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/productSize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="35"
+                android:textColor="@color/purple_500" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/productDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="The Chuck 70 goes golden with a mindfulness print inspired by the mystical and elemental. All the premium details are there, with 12oz canvas featuring golden graphics inspired by nature, complete with gold-tone eyelets, wing-tongue stitching and tonal pinstripe. The cushy insole to support your stride all day." />
+
+            <ImageButton
+                android:id="@+id/addToCartBtn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="#6200EE"
+                android:src="@drawable/ic_cart_foreground" />
+        </LinearLayout>
+    </FrameLayout>
+
+
+</androidx.core.widget.NestedScrollView>
