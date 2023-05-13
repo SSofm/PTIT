@@ -1,0 +1,54 @@
+<div class="header">
+
+  <nav class="navbar navbar-expand-md navbar-dark  bg-dark">
+    {{!-- class="navbar navbar-expand-lg bg-light --}}
+    {{!-- navbar navbar-expand-md navbar-dark fixed-top bg-dark --}}
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">IT Book</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Category
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Data Science</a></li>
+              <li><a class="dropdown-item" href="#">Algorithm</a></li>
+              <li><a class="dropdown-item" href="#">Programming Language</a></li>
+            </ul>
+          </li>
+
+        </ul>
+        <form class="d-flex" role="search" method="POST" action="/books/search" novalidate>
+          <select class="form-select" name="searchOption" aria-label="Default select example" style="width: 150px;">
+            <option value="0" selected>All</option>
+            <option value="1">Name</option>
+            <option value="2">Author</option>
+            <option value="3">Category</option>
+          </select>
+          <input class="form-control me-2" type="search" name="searchTxt" id="searchInput" placeholder="Search"
+            aria-label="Search" style="width: 500px; margin-left: 15px;">
+          <button class="btn btn-outline-success" type="submit" style="margin-right: 345px;">Search</button>
+        </form>
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Nguyen Van Sang
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Frofile</a></li>
+            <li><a class="dropdown-item" href="/collection">Your Library</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</div>

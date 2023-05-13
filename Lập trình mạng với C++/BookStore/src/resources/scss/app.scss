@@ -1,0 +1,12 @@
+@import '_variables';
+@import 'footer';
+@import 'home';
+
+.container {
+  height: 3800px;
+  max-width: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}

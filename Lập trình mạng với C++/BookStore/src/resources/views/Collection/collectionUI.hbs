@@ -1,0 +1,69 @@
+<div class="row">
+
+    {{#each bookData}}
+
+    <div class="col-sm-6 col-lg-3">
+        <div class="card mod__card" style="width: 18rem; height: 700px;">
+            <a href="/books/{{this.slug}}">
+                <img class="card-img-top" src="{{this.image}}" alt="Card image cap">
+            </a>
+            <div class="card-body">
+                <a href="/books/{{this.slug}}">
+                    <h5 class="card-title">{{name}}</h5>
+
+                </a>
+                <p class="card-text">{{this.description}}</p>
+                <a href="/books/{{this.slug}}" class="btn btn-primary">Read more</a>
+
+                <form class="d-flex" role="button" method="POST" action="/collection/{{this.id}}/delete" novalidate
+                    style="position: absolute; margin-left: 135px; margin-top: -45px;">
+                    <button type="submit" class="btn btn-danger" style="margin-left: 95px;" data-bs-toggle="modal"
+                        data-id="{{this.id}}" data-bs-target="#delete-book-collection">Delete</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    {{/each}}
+</div>
+
+
+{{!-- <div id="delete-book-collection" class="modal" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Confirm</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>You sure?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="btn-delete-book_collection" class="btn btn-danger">Delete</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div> --}}
+
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const bookId;
+        $('#delete-book-collection').on('show.bs.model', function (event) {
+            const button = $(event.relatedTarget);
+            bookId = button.data('id');
+            
+        });
+
+        const btnDeleteBook = document.getElementById('btn-delete-book_collection');
+        console.log(btnDeleteBook);
+        btnDeleteBook.onclick = function(){
+            ale
+        }
+
+    })
+
+
+</script>

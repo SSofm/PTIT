@@ -1,0 +1,70 @@
+{{#if message}}
+<div style="text-align: center" class="alert alert-{{message.type}}">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>{{message.intro}}</strong>
+    {{message.message}}
+</div>
+
+{{/if}}
+
+
+
+
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <img src="https://theme.hstatic.net/200000211451/1000632417/14/slideshow_2.jpg?v=259" class="d-block w-100"
+                alt="first image" />
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="https://theme.hstatic.net/200000211451/1000632417/14/slideshow_4.jpg?v=259" class="d-block w-100"
+                alt="second image" />
+        </div>
+        <div class="carousel-item">
+            <img src="https://theme.hstatic.net/200000211451/1000632417/14/slideshow_3.jpg?v=259" class="d-block w-100"
+                alt="third image" />
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        {{! <span class="carousel-control-prev-icon" aria-hidden="true"></span> }}
+        {{! <span class="visually-hidden">Previous</span> }}
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        {{! <span class="carousel-control-next-icon" aria-hidden="true"></span> }}
+        {{! <span class="visually-hidden">Next</span> }}
+    </button>
+</div>
+
+<div class="topSach">
+    <div class="topSach__title">Tìm kiếm nhiều nhất</div>
+    <hr />
+    <div class="row">
+        {{#each books}}
+
+        <div class="col-sm-6 col-lg-3">
+            <div class="card mod__card" style="width: 18rem; height: 700px;">
+                <a href="/books/{{this.slug}}">
+                    <img class="card-img-top" src="{{this.image}}" alt="Card image cap" />
+                </a>
+                <div class="card-body">
+                    <a href="/books/{{this.slug}}">
+                        <h5 class="card-title">{{this.name}}</h5>
+                        
+                    </a>
+                    <p class="card-text">{{this.description}}</p>
+                    <a href="/books/{{this.slug}}" class="btn btn-primary" style="position: relative;">Read more</a>
+                    <form class="d-flex" role="button" method="POST" action="/collection/{{this.id}}" novalidate style="position: absolute; margin-left: 255px; margin-top: -45px;">
+                        <button type="submit" class="btn btn-light" data-bs-toggle="modal"  data-bs-target="#add-book-collection"><img
+                                src="/img/collection.png" alt="collection" style="width: 28px;" /></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        {{/each}}
+    </div>
+
+</div>
+
+
+

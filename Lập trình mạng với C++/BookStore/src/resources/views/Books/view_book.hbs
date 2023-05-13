@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="col-6">
+    <h1>Books</h1>
+  </div>
+  <div class="col-6 d-flex justify-content-end">
+    <a href="/Books/addBook" type="button" class="btn btn-primary align-self-center">+ Add book</a>
+  </div>
+</div>
+
+<table class="table table-bordered">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Author</th>
+      <th scope="col">Category</th>
+      <th scope="col">Description</th>
+      <th scope="col" class="text-end" style="width: 265px;">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+
+    {{#each books}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td>{{this.name}}</td>
+      <td>{{this.author}}</td>
+      <td>{{this.category}}</td>
+      <td>{{this.description}}</td>
+      <td class="text-end">
+        <a href="/viewuser/{{this.id}}" type="button" class="btn btn-primary btn-small"><i class="bi bi-eye"></i>View</a>
+        <a href="/edituser/{{this.id}}" type="button" class="btn btn-secondary btn-small"><i class="bi bi-pencil"></i>Edit</a>
+        <a href="/{{this.id}}" type="button" class="btn btn-danger btn-small"><i class="bi bi-person-x"></i>Delete</a>
+      </td>
+    </tr>
+    {{/each}}
+
+  </tbody>
+</table>

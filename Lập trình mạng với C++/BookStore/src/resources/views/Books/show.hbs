@@ -1,0 +1,38 @@
+<div class="inforbook">
+    <div class="mt-4">
+        <div class="row">
+            <div class="card" style="width: 18rem; margin-left: 35px;">
+                <img src="{{book.image}}" class="card-img-top" alt="{{book.name}}">
+                <div class="card-body">
+                    <p class="card-text">{{book.description}}</p>
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <h2>{{book.name}} </h2> <br>
+                <h5>Author: {{book.author}}</h5> <br>
+                <h5>Category: {{book.category}}</h5> <br>
+
+
+                <p>
+                    <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button"
+                        aria-expanded="false" aria-controls="collapseExample">
+                        Xem giới thiệu sách
+                    </a>
+
+                    <a href="/readingBook/{{book.plug}}/chapter-1">
+                        <button class="btn btn-primary" type="button">
+                            Đọc sách
+                        </button>
+                    </a>
+
+
+                </p>
+                <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        {{{book.mota}}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
