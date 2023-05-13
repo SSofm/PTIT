@@ -1,0 +1,14 @@
+@import '_variables';
+@import 'footer';
+
+.MainContainer {
+    width: 100%;
+    height: 650px;
+}
+
+.d-grid {
+    padding-top: 200px;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
